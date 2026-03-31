@@ -42,5 +42,4 @@ python3 -m wafer_sim \
 
 ## Notes
 
-- This environment defaults `python` to Python 2.7. Use `python3`.
 - The current implementation focuses on the Phases 1-3 core path plus basic metrics/export. Credit-based flow control, advanced deadlock handling, and visualization are left as follow-on work.
