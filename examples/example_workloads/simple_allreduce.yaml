@@ -1,0 +1,15 @@
+workload:
+  name: "simple_allreduce"
+  groups:
+    - group_id: "block_{i}"
+      type: "every_n"
+      n: 4
+      strategy: "block"
+  ops:
+    - op_id: "allreduce_{i}"
+      op_type: "allreduce"
+      group_pattern: "block_*"
+      data_size: 4096
+      algorithm: "ring_allreduce"
+      algorithm_params:
+        num_chunks: 2

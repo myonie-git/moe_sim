@@ -1,0 +1,42 @@
+topology:
+  type: mesh
+  width: 8
+  height: 8
+
+tile:
+  injection_bandwidth: 32
+  ejection_bandwidth: 32
+  local_buffer_size: 65536
+  compute_capacity: 1024
+  injection_queue_capacity: 64
+  ejection_queue_capacity: 64
+
+link:
+  bandwidth: 32
+  latency: 1
+  full_duplex: true
+  buffer_size: 1024
+
+reticle:
+  enabled: false
+  boundary_period: 50
+  cross_reticle_bandwidth: 16
+  cross_reticle_latency: 3
+
+routing:
+  algorithm: xy
+  virtual_channels: 2
+  flow_control: credit
+  fault_tolerant: true
+
+packet:
+  max_packet_size: 256
+
+defects:
+  dead_tiles: []
+  dead_links: []
+
+simulation:
+  mode: event_driven
+  max_cycles: 10000000
+  log_level: info
